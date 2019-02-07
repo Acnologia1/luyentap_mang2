@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    //Viết một chương trình để đếm số từ trong một chuỗi
+    var array = [];
+    var sopt = parseInt(prompt('Nhap so phan tu', 0));
+    var i = 0;
+    var dem = 0;
+    var ghiso = []
+    for (i = 0; i < sopt; i++) {
+        array[i] = prompt('Nhap phan tu thu ' + i + '= ',);
+    }
+    //In ra
+    //for (i = 0; i < sopt; i++) {
+    //    document.write(array[i]);
+    //}
+    //Đếm số ký tự là số trong mảng
+    for (i = 0; i < sopt; i++) {
+        if (array[i] >= '0' && array[i] <= '9') {
+            ghiso[i] = array[i];
+            //document.write('Day la ky tu so');
+        }
+        else if (array[i] >='A' && array[i] <='Z' || array[i] >='a' && array[i]<='z')
+        {
+            //document.write('day la ky tu chuoi');
+            dem++;
+        }
+        else{
+            //document.write('day la ky tu dac biet');
+        }
+    }
+    //In ra chuoi so
+    //for (i in ghiso) {
+    //    document.write('<br/>'+ghiso[i]+'<br/>');
+    //}
+    document.write('<br/>' + 'ky tu chuoi: ' + dem);
+</script>
+</body>
+</html>
